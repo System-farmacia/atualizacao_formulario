@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FarmaSync-Login</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo" class="logotipo">
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- LOGIN -->
+            <div class="content first-content">
+                <!-- PARTE VERDE -->
+                <div class="first-column">
+                    <h2 class="title title-primary">Bem-vindo de volta!</h2>
+                    <p class="description">continue com seu login</p>
+                    <p class="description">alguma coisa</p>
+                    <button class="btn">login</button>
+                </div>
+                <!-- PARTE BRANCA -->
+                <div class="second-column">
+                    <h2 class="title title-second">Crie sua conta</h2>
+                    <!-- SOCIAL MIDIA -->
+                    <div class="social-midia">
+                        <ul class="list-social-midia">
+                            <a class="link-social-midia"href="#">
+                            <li class="item-social-midia">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </li>
+                            </a>
+                            <a class="link-social-midia"href="#">
+                            <li class="item-social-midia">
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </li>
+                            </a>
+                            <a class="link-social-midia"href="#">
+                            <li class="item-social-midia">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <!-- FIM SOCIAL MIDIA -->
+
+                    <!-- FORM -->
+                    <p class="description description-column2">ou utilize seu e-mail para cadastrar</p>
+                    <form class="form">
+                        <input type="text" placeholder="CPF">
+                        <input type="text" placeholder="Nome">  <!-- PLACEHOLDER serve para deixar algo escrito dento do input-->
+                        <input type="email" placeholder="E-mail">
+                        <div class="form-dados">
+                            <input type="text" placeholder="Genero">
+                            <input type="number" placeholder="Peso">
+                        </div>
+                        <div class="form-endereco">
+                            <input type="text" placeholder="Rua">
+                            <input type="text" placeholder="Bairro">
+                            <input type="text" placeholder="Cidade">
+                            <input type="text" placeholder="Estado">
+                            <input type="number" placeholder="Cep">
+                        </div>
+                        <input type="date" placeholder="Data de Nascimento">
+                        <input type="password" minlength="8" placeholder="Senha" required>
+                        <button class="btn btn-colmn2">Cadastrar</button>
+                    </form>
+                    <!-- FIM FORM -->
+                </div>
+            </div>
+
+            <!-- CADASTRO -->
+            <div class="content second-content"> 
+                <div class="first-column">
+                    <h2 class="title title-primary">Sua primeira vez aqui?</h2>
+                    <p class="description description-primary">crie sua conta para ter acesso aos melhores produtos</p>
+                    <button class="btn btn-primary"><a href="login.html">cadastrar</a></button>
+                </div>
+                <div class="second-column">
+                    <h2 class="title title-second">Faça seu login</h2>
+                    <div class="second-column">
+                    <!-- SOCIAL MIDIA -->
+                    <div class="social-midia">
+                        <ul class="list-social-midia">
+                            <a class="link-social-midia"href="#">
+                            <li class="item-social-midia">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </li>
+                            </a>
+                            <a class="link-social-midia"href="#">
+                            <li class="item-social-midia">
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </li>
+                            </a>
+                            <a class="link-social-midia"href="#">
+                            <li class="item-social-midia">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <!-- FIM SOCIAL MIDIA -->
+
+                    <!-- FORM -->
+                    <p class="description description-column2">Ou utilize seu e-mail da conta</p>
+                    <form class="form" method="get" action="acessarconta.php">
+                        <input type="email" placeholder="E-mail" name = "email_usuario">
+                        <input type="password" placeholder="Senha" name = "senha_usuario">
+                        <a class="password" href="#">Esqueci minha senha</a>
+                        <button class="btn btn-colmn2">Cadastro</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

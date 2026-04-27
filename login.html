@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FarmaSync-Login</title>
+</head>
+<body>
+    <header>
+       <a href="inicio.php"> <img src="img/logo.png" alt="Logo" class="logotipo"></a>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- LOGIN -->
+            <div class="content first-content">
+                <!-- PARTE VERDE -->
+                <div class="first-column">
+                    <h2 class="title title-primary">Bem-vindo de volta!</h2>
+                    <p class="description">continue com seu login</p>
+                    <p class="description">alguma coisa</p>
+                    <button class="btn"><a href="Jatemconta.html">login</a></button>
+                </div>
+                <!-- PARTE BRANCA -->
+                <div class="second-column">
+                    <h2 class="title title-second">Crie sua conta</h2>
+                    <!-- SOCIAL MIDIA -->
+                    <div class="social-midia">
+                        <ul class="list-social-midia">
+                            <li class="item-social-midia"><a href="#">
+                                <i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li class="item-social-midia">
+                                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                            </li>
+                            <li class="item-social-midia">
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="description description-column2">ou utilize seu e-mail para cadastrar</p>
+                    <form class="form" action="cadastro.php" method="POST">
+                        <input type="cpf" placeholder="CPF" name="CPF">
+                        <input type="nome" placeholder="Nome" name="nome_usuario">  <!-- PLACEHOLDER serve para deixar algo escrito dento do input-->
+                        <input type="email" placeholder="E-mail" name="email_usuario">
+                        <div class="form-dados">
+                            <input list="genero" placeholder="Genero" name="genero">
+                                <datalist id="genero" >
+                                    <option value="Masculino">
+                                    <option value="Feminino">
+                                    <option value ="Não Binário">
+                                    <option value="Prefiro não dizer">
+                                </datalist>
+                           
+                        </div>
+                        <div class="form-endereco">
+                            <input type="text" placeholder="Rua" name="logradouro">
+                            <input type="text" placeholder="Bairro" name="bairro">
+                            <input type="text" placeholder="Cidade" name="Cidade">
+                            <input list="estado" placeholder="Estado" name="estado">
+                                <datalist id="estado">
+                                    <option value="AC">
+                                    <option value="AL">
+                                    <option value="AP">
+                                    <option value="AM">
+                                    <option value="BA">
+                                    <option value="CE">
+                                    <option value="DF">
+                                    <option value="ES">
+                                    <option value="GO">
+                                    <option value="MA">
+                                    <option value="MT">
+                                    <option value="MS">
+                                    <option value="MG">
+                                    <option value="PA">
+                                    <option value="PB">
+                                    <option value="PR">
+                                    <option value="PE">
+                                    <option value="PI">
+                                    <option value="RJ">
+                                    <option value="RN">
+                                    <option value="RS">
+                                    <option value="RO">
+                                    <option value="RR">
+                                    <option value="SC">
+                                    <option value="SP">
+                                    <option value="SE">
+                                    <option value="TO">
+                                </datalist>
+                            <input type="cep" placeholder="Cep" name="cep">
+                        </div>
+                        <input type="date" placeholder="Data de Nascimento" name="data_de_nasc">
+                        <input type="password" minlength="8" placeholder="Senha" name="senha_usuario" required>
+                        <button class="btn btn-colmn2" value="Cadastrar usuários">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CADASTRO -->
+            <div class="content second-content"> 
+                <div class="first-column">
+                    <h2 class="title">Sua primeira vez aqui?</h2>
+                    <p class="description">crie sua conta para ter acesso aos melhores produtos</p>
+                    <button class="btn">cadastrar</button>
+                </div>
+                <div class="second-column">
+                    <h2>Faça seu login</h2>
+                    <div class="socialmidia">
+                        <ul class="list-social-midia">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Google</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                        </ul>
+                    </div>
+                    <p class="description">Ou utilize seu e-mail da conta</p></p>
+                    <form class="form">
+                        <input type="email" placeholder="E-mail">
+                        <input type="senha" placeholder="Senha">
+                        <a href="#">Esqueci minha senha</a>
+                        <button class="btn">Login</button>
+                    </form>
+                </div>~
+            </div>
+        </div>
+    </main>
+</body>
+</html>

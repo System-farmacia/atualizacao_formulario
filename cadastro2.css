@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*a medida das bordas e padding nao afetam o tamanho do conteudo*/
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ebebeb; /* Cor de fundo suave */
+}
+
+/*VARIAVEIS DAS CORES*/
+:root{
+    --cor1: #1E2842;
+    --cor2: #43a2d3;
+    --cor3: #86c541;
+    --cor4: #319b3f;
+    --cor5: #f9fafb;
+}
+
+/*NAVBAR*/
+header {
+    background-color: var(--cor1); /* Cor de fundo do header */
+    position: sticky; /* Mantém a posição fixa do banner */
+    margin-bottom: 20px; /* Espaçamento abaixo do header */
+    top: 0;
+    left: 0;
+    display: flex; /*ele permite organizar os elementos em linha ou coluna*/
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px 80px; /* Espaçamento interno aumentado para mais espaço das margens */
+    border-bottom: 20px solid var(--cor3); /* Borda na parte inferior do header */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+
+.logotipo {
+    margin-right: auto; /* Empurra o logotipo para a esquerda */ 
+    width: 150px; /* Ajuste conforme o tamanho desejado */
+    height: auto; /* Mantém a proporção da imagem */
+    padding: 10px;
+}
+
+/* MAIN */
+
+/* PRIMEIRA COLUNA */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% da altura da viewport, serve para centralizar verticalmente */
+}
+
+.content{
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 80%;
+    height: 82%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content::before{
+    content: "";
+    position: absolute;
+    background-color: var(--cor4);
+    width: 45%;
+    height: 100%;
+}
+
+.first-content::before{
+    border-radius: 220px 15px 15px 220px;
+    left: 0;
+    /* left: 0 → o elemento começa colado na borda esquerda do pai e cresce para a direita. */
+}
+.second-content::before{
+    border-radius: 220px 15px 15px 220px;
+    right: 0;
+    /* right: 0 → o elemento começa colado na borda direita do pai e cresce para a esquerda. */
+}
+
+/* TITULOS */
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-primary{
+    color: #ffffff;
+    margin: 0 20px;
+}
+
+.first-content .title-second{
+    color: var(--cor4);
+    margin: 0px;
+}
+
+.second-content .title-second{
+    color: var(--cor4);
+    margin-top: 40px;
+}
+/* DESCRICOES */
+.description{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 30px; /* Espaçamento entre linhas */
+}
+
+.description-column2{
+    color: #95a5a6;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 30px; /* Espaçamento entre linhas */
+}
+
+/*BOTOES*/
+.btn a{
+    color:inherit;
+    text-decoration: none;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: var(--cor4);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.btn:hover{
+    background-color: #ffffff;
+    color: var(--cor4);
+    transition: 0.5s;
+}
+
+
+
+
+.btn-colmn2{
+    border-radius: 5px;
+    border: 1px solid var(--cor4);
+    color: #ffffff;
+    background-color: var(--cor4);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/*PRIMEIRO CONTEUDO*/
+.first-content{
+    /* display: flex; */
+    display: none;
+}
+
+/* PRIMEIRA COLUNA */
+.first-column{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/* SEGUNDA COLUNA */
+.second-column{
+    flex: 2 0 auto; /* Define o flex-grow para 2, o flex-shrink para 0 e o flex-basis para auto 
+    flex-grow se refere ao crescimento da coluna, flex-shrink se refere ao diminuicao da coluna e flex-basis se refere ao tamanho inicial da coluna
+    oq significa que a coluna ira crescer ou diminuir de acordo com o conteudo da coluna*/
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* SOCIAL MIDIA */
+.list-social-midia{
+    display: flex;
+    list-style-type: none;
+}
+
+.link-social-midia:not(:first-child){
+    margin-left: 10px;
+}
+
+.item-social-midia{
+    margin: 0 10px;
+    border: #95a5a6 1px solid;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: #95a5a6;
+}
+
+.item-social-midia:hover{
+    background-color: var(--cor4);
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+/* .item-social-midia:hover a{
+    color: #ffffff;
+    transition: 0.5s;
+} */
+
+/* FORMULARIO */
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.first-content .form{
+    width: 60%;
+    gap:  8px;
+}
+
+.first-content .form input{
+    height: 5px;
+    font-size: 12px;
+}
+
+.second-content .form{
+    gap: 15px; /* mais espaço no login pois tem menos campos */
+    padding: 20px;
+}
+
+.second-content .form input{
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+}
+
+.form-dados{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+.form-dados input{
+     flex: 1 1 140px; /* cresce, encolhe, base 140px */
+}
+
+.form-endereco{
+    display: flex; /* Habilita o uso de flexbox */
+    justify-content: space-evenly; /* Centraliza os inputs horizontalmente */
+    flex-wrap: wrap; /* quebra os inputs em linhas */
+    gap: 10px;
+}
+
+.form-endereco input{
+    width: 100px;
+    flex: 1 1 20px;
+}
+
+input{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 5px; /* Aumenta a altura do input */
+    font-size: 14px;
+    background-color: #f7f7f7;
+}
+
+/* SEGUNDA COLUNA */
+.second-content{
+    position: absolute;
+    display: flex;
+    /* display: none; */
+}
+
+.second-content .first-column{
+    order: 2;
+}
+
+.second-content .second-column{
+    order: 1;
+}
+
+.password{
+    color: #95a5a6;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+
+.password ::first-letter{
+    text-transform: capitalize;
+}
+
